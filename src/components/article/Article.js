@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from "../button/Button";
 import html from "../../assets/html.png"
 import css from "../../assets/css.png"
@@ -10,7 +10,7 @@ import arrowLeft from "../../assets/arrow-left.png"
 import arrowRight from "../../assets/arrow-right.png"
 
 
-function Article( { title, logicRight, logicLeft, view, description, github, image, liveDemo }) {
+function Article( { title, logicRight, logicLeft, view, description, descriptionTwo, github, image, liveDemo, children }) {
 
     return (
         <article className="article-group" className={view}>
@@ -18,9 +18,12 @@ function Article( { title, logicRight, logicLeft, view, description, github, ima
 
             </div>
             <div className="article-description-section article-section">
-                <p>
-                    {description}
-                </p>
+
+                {description && <p>{description}</p>}
+
+                    {children}
+
+                {descriptionTwo && <p>{descriptionTwo}</p>}
 
                 <div className='tech-container'>
                     <span><img className="tech-icons" src={html} alt="html"/></span>
@@ -31,11 +34,11 @@ function Article( { title, logicRight, logicLeft, view, description, github, ima
             </div>
             <div className="article-title-section article-section">
                 <div className="title-section">
-                    <h2>{title}</h2>
+                    <h2 className="bottom-title">{title}</h2>
                 </div>
                 <div className='icon-section'>
-                    <a href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
-                    <a href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>
+                    <a target="_blank" rel="noreferrer" href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
+                    <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>
                 </div>
             </div>
             <div className="article-nav-section article-section">

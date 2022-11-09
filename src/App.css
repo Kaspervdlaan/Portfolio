@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  /*--background-color: rgb(5, 10, 24);*/
   --background-color: #0d0b0a;
   --border-color: rgb(255, 255, 255, 0.05);
-  --button-color: #63d9d9;
+  --green-color: #9DCB87;
+  --blue-color:#62C0C0;
+  --pink-color:#CC84B7;
+  --orange-color:#D59623;
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background-color);
-  height: 100vh;
-  margin: 0px;
+  margin: 0 ;
 }
 
 .wrapper {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 85vh;
   max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
@@ -25,9 +32,21 @@ body {
   box-sizing: border-box;
 }
 
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15vh;
+}
+
 nav {
   display: flex;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background-color);
+  height: 15vh;
+  width: 1400px;
+  margin: 0 auto;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -38,6 +57,36 @@ nav .nav-section {
   border-left:1px solid var(--border-color);
   align-items: center;
   justify-content: center;
+}
+
+.contact-button {
+  background-color: var(--green-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: var(--background-color);
+  font-weight: 500;
+}
+
+#send-button {
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  font-family: monospace;
+  border: 1px solid var(--orange-color);
+  background-color: var(--background-color);
+  color: #8e8e8e;
+  transform: scale(1.0);
+  font-size: 1rem;
+}
+
+#send-button:hover {
+  color: var(--background-color);
+  background-color: var(--orange-color);
+}
+
+.contact-button:hover {
+  background-color: var(--blue-color);
+  transform: scale(1.05);
 }
 
 #nav-logo-section {
@@ -70,10 +119,19 @@ nav .nav-section {
   gap: 3rem;
 }
 
-h1, h2, h3, a, p, span {
-  font-family: "Rubik", sans-serif;
+h1, h2, h3, h4, h5, h6, a, p, span {
+  font-family: 'Roboto Slab', serif;
   font-weight: 400;
   color: white;
+}
+
+.work-link {
+  cursor: pointer;
+}
+
+p {
+  font-weight: 200;
+  line-height: 2;
 }
 
 a {
@@ -91,10 +149,16 @@ main article {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 3fr 1fr;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   transition: 0.6s;
 }
+
+.contact-page {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
 
 main article .article-section {
   height: 100%;
@@ -112,24 +176,23 @@ main article .article-nav-section {
 
 main article .article-image-section {
   display: flex;
+  background-color: var(--background-color);
   align-items: center;
   justify-content: center;
   transition: 1.5s;
-  opacity: 50%;
 }
 
 main article .article-one {
-  background-image: url('assets/landingpage.PNG');
-  background-position: top;
+  background-image: url('assets/galactic-universe.PNG');
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
   transition: 1.5s;
-  opacity: 50%;
 }
 
 main article .article-one:hover{
-  opacity: 100%;
-  background-position: bottom;
+  background-position: bottom right;
+
 }
 
 main article .article-two {
@@ -138,11 +201,9 @@ main article .article-two {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 1.5s;
-  opacity: 50%;
 }
 
 main article .article-two:hover{
-  opacity: 100%;
   background-position: bottom;
 }
 
@@ -152,11 +213,9 @@ main article .article-three {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 1.5s;
-  opacity: 50%;
 }
 
 main article .article-three:hover{
-  opacity: 100%;
   background-position: bottom;
 }
 
@@ -166,11 +225,9 @@ main article .article-four {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 1.5s;
-  opacity: 50%;
 }
 
 main article .article-four:hover{
-  opacity: 100%;
   background-position: bottom;
 }
 
@@ -187,7 +244,6 @@ main article .article-description-section {
 main article .article-description-section .tech-container {
   display: flex;
   justify-content: flex-end;
-  font-size: 20px;
 }
 
 main article .article-title-section {
@@ -211,10 +267,12 @@ main article .article-nav-section button {
 
 .hidden {
   transform: translateX(100vw);
+  opacity: 0;
 }
 
 .after {
   transform: translateX(-100vw);
+  opacity: 0;
 }
 
 button {
@@ -232,7 +290,17 @@ button {
 }
 
 .top-icons:hover {
-  transform: scale(1.07);
+  transform: scale(1.12);
+}
+
+.home-icon {
+  cursor: pointer;
+  width: 30px;
+  transition: 0.2s;
+}
+
+.home-icon:hover {
+  transform: scale(1.12);
 }
 
 .tech-container span {
@@ -247,4 +315,61 @@ button {
 .tech-icons:hover {
   width: 30px;
   transform: scale(1.07);
+}
+
+.tech-icons-big {
+  width: 60px;
+  filter: saturate(1);
+}
+
+.tech-icons-big:hover {
+  filter: saturate(1.5);
+}
+
+.form-wrapper {
+  height: 85vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+input, textarea {
+  background-color: var(--background-color);
+  color: var(--pink-color);
+  border: 1px solid var(--orange-color);
+  border-radius: 2px;
+  outline: none;
+  font-family: monospace;
+}
+
+input {
+  color: var(--blue-color);
+  padding: 0.5rem 1rem;
+}
+
+input:-webkit-autofill {
+  background-color: var(--background-color);
+}
+
+textarea {
+  padding: 0.5rem 1rem;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }

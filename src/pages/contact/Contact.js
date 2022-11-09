@@ -1,0 +1,85 @@
+import React, {useRef} from 'react';
+import {useForm} from "react-hook-form"
+import html from "../../assets/html.png";
+import css from "../../assets/css.png";
+import javascript from "../../assets/javascript.png";
+import react from "../../assets/react.png";
+
+import emailjs from '@emailjs/browser';
+
+
+function Contact() {
+    // const { register, handleSubmit } = useForm()
+    // function onSubmit(formData) {
+    //     console.log(formData);
+    // }
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_l37yjbj', 'template_4nzdrlm', form.current, 'TUrBsSvMuIfPa4Trp')
+            .then((result) => {
+                console.log(result.text);
+                e.target.reset();
+                alert('Message Send!')
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+    return (
+        <div id="contact" className="wrapper">
+            <main>
+
+                <article className="article-group contact-page ">
+                    <div id="about-me" className="article-image-section article-section">
+                        <h3>About me!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad consectetur consequuntur dignissimos dolorem in, incidunt laboriosam, laudantium nesciunt nobis placeat quod, ratione recusandae rerum sint sit soluta unde voluptatibus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid debitis error facilis itaque reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tenetur?</p>
+                    </div>
+
+                    <div className="article-description-section article-section">
+
+                        <form ref={form} onSubmit={sendEmail}>
+                            <h2>Send me a message!</h2>
+                            <label>
+                            <input placeholder="email" type="email" name="user_email" /></label>
+                            <label>
+                            <textarea cols="30" rows="10" placeholder="message" name="message" /></label>
+                            <button type="submit" id="send-button" className="contact-button">Send</button>/>
+                        </form>
+
+                        {/*<form className="" onSubmit={handleSubmit(onSubmit)}>*/}
+                        {/*    <h2>Send me a message!</h2>*/}
+                        {/*    <label htmlFor="email">*/}
+                        {/*        <input required placeholder="Email" type="email" {...register("email")}/>*/}
+                        {/*    </label>*/}
+                        {/*    <label htmlFor="message">*/}
+                        {/*        <textarea required rows="10" placeholder="Message" {...register("message")}></textarea>*/}
+                        {/*    </label>*/}
+                        {/*    <button id="send-button" className="contact-button">Send</button>*/}
+                        {/*</form>*/}
+
+                    </div>
+                    <div className="article-title-section article-section">
+                        <div className="title-section">
+                            <h2>Techstack</h2>
+                        </div>
+                        <div className='icon-section'>
+                            <img className="tech-icons-big" src={html} alt=""/>
+                            <img className="tech-icons-big" src={css} alt=""/>
+                            <img className="tech-icons-big" src={javascript} alt=""/>
+                            <img className="tech-icons-big" src={react} alt=""/>
+                        </div>
+                    </div>
+                    <div className="article-nav-section article-section">
+
+                    </div>
+                </article>
+            </main>
+        </div>
+    );
+}
+
+export default Contact;

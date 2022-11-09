@@ -1,24 +1,28 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import github from '../../assets/github.png'
 import linkedin from '../../assets/linkedin.png'
+import home from '../../assets/home.png'
 
 function Nav() {
+
+    function toTop() {
+    window.scrollTo(0,0)
+}
     return (
         <nav>
             <div id="nav-logo-section" className="nav-section">
-                <a href="#">🏠</a>
+                <img onClick={toTop} className="home-icon" src={home} alt="github-icon"/>
             </div>
             <div id="nav-link-section" className="nav-section">
-                <NavLink to="/about">ABOUT</NavLink>
-                <NavLink to="/work">WORK</NavLink>
+                <h4 className="work-link" onClick={toTop}>WORK</h4>
+                <a rel="noreferrer" href="#contact">ABOUT</a>
             </div>
             <div id="nav-social-section" className="nav-section">
-                <a href=""><img className="top-icons" src={github} alt="github-icon"/></a>
-                <a href=""><img className="top-icons" src={linkedin} alt="linkedin-icon"/></a>
+                <a rel="noreferrer" href="https://github.com/Kaspervdlaan" target="_blank"><img className="top-icons" src={github} alt="github-icon"/></a>
+                <a rel="noreferrer" href="https://github.com/Kaspervdlaan" target="_blank"><img className="top-icons" src={linkedin} alt="linkedin-icon"/></a>
             </div>
-            <div id="nav-contact-section" className="nav-section">
-                <a href="">CONTACT</a>
+            <div id="nav-contact-section" className="nav-section nav-background">
+                <a rel="noreferrer" href="#contact"><div className="contact-button">CONTACT</div></a>
             </div>
         </nav>
     );
