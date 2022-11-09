@@ -5,6 +5,7 @@ import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
 
 import emailjs from '@emailjs/browser';
+import swal from "sweetalert";
 
 
 function Contact() {
@@ -17,10 +18,22 @@ function Contact() {
             .then((result) => {
                 console.log(result.text);
                 e.target.reset();
-                alert('Message Send!')
+                swal({
+                    className:"alert",
+                    title: "Message send!",
+                    text: "",
+                    button: "Continue...",
+                });
             }, (error) => {
                 console.log(error.text);
+                swal({
+                    className:"error",
+                    title:"Something went wrong..",
+                    text:"",
+                    button: "Continue...",
+                })
             });
+
     };
     return (
         <div id="contact" className="wrapper">
@@ -38,9 +51,9 @@ function Contact() {
                         <form ref={form} onSubmit={sendEmail}>
                             <h2 className="message-h2">Send me a message!</h2>
                             <label>
-                            <input placeholder="email" type="email" name="user_email" /></label>
+                            <input required placeholder="email" type="email" name="user_email" /></label>
                             <label>
-                            <textarea cols="30" rows="10" placeholder="message" name="message" /></label>
+                            <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
                             <button type="submit" id="send-button" className="contact-button">Send</button>/>
                         </form>
 
