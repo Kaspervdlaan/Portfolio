@@ -125,6 +125,10 @@ h1, h2, h3, h4, h5, h6, a, p, span {
   color: white;
 }
 
+.message-h2 {
+  font-family: monospace;
+}
+
 .work-link {
   cursor: pointer;
 }
@@ -183,7 +187,7 @@ main article .article-image-section {
 }
 
 main article .article-one {
-  background-image: url('assets/galactic-universe.PNG');
+  background-image: url('assets/galactic.PNG');
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -281,7 +285,17 @@ button {
 
 .icon-section {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
+}
+
+.techstack-icon-section {
+  flex-direction: column;
+}
+
+.top-icon-section,
+.bottom-icon-section {
+  display: flex;
+  gap: 0.3rem;
 }
 
 .top-icons {
@@ -373,3 +387,15 @@ textarea::placeholder {
   flex-direction: column;
   padding: 2rem;
 }
+
+.carousel {
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+.carousel div {
+  max-height: 65vh;
+}
+
+

@@ -1,5 +1,4 @@
 import React, {useRef} from 'react';
-import {useForm} from "react-hook-form"
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
@@ -9,11 +8,6 @@ import emailjs from '@emailjs/browser';
 
 
 function Contact() {
-    // const { register, handleSubmit } = useForm()
-    // function onSubmit(formData) {
-    //     console.log(formData);
-    // }
-
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -42,7 +36,7 @@ function Contact() {
                     <div className="article-description-section article-section">
 
                         <form ref={form} onSubmit={sendEmail}>
-                            <h2>Send me a message!</h2>
+                            <h2 className="message-h2">Send me a message!</h2>
                             <label>
                             <input placeholder="email" type="email" name="user_email" /></label>
                             <label>
@@ -50,27 +44,24 @@ function Contact() {
                             <button type="submit" id="send-button" className="contact-button">Send</button>/>
                         </form>
 
-                        {/*<form className="" onSubmit={handleSubmit(onSubmit)}>*/}
-                        {/*    <h2>Send me a message!</h2>*/}
-                        {/*    <label htmlFor="email">*/}
-                        {/*        <input required placeholder="Email" type="email" {...register("email")}/>*/}
-                        {/*    </label>*/}
-                        {/*    <label htmlFor="message">*/}
-                        {/*        <textarea required rows="10" placeholder="Message" {...register("message")}></textarea>*/}
-                        {/*    </label>*/}
-                        {/*    <button id="send-button" className="contact-button">Send</button>*/}
-                        {/*</form>*/}
-
                     </div>
                     <div className="article-title-section article-section">
                         <div className="title-section">
                             <h2>Techstack</h2>
                         </div>
-                        <div className='icon-section'>
-                            <img className="tech-icons-big" src={html} alt=""/>
-                            <img className="tech-icons-big" src={css} alt=""/>
-                            <img className="tech-icons-big" src={javascript} alt=""/>
-                            <img className="tech-icons-big" src={react} alt=""/>
+                        <div className='icon-section techstack-icon-section'>
+                            <div className="top-icon-section">
+                                <img className="tech-icons-big" src={html} alt=""/>
+                                <img className="tech-icons-big" src={css} alt=""/>
+                                <img className="tech-icons-big" src={javascript} alt=""/>
+                                <img className="tech-icons-big" src={react} alt=""/>
+                            </div>
+                            <div className="bottom-icon-section">
+                                <img className="tech-icons-big" src={react} alt=""/>
+                                <img className="tech-icons-big" src={html} alt=""/>
+                                <img className="tech-icons-big" src={css} alt=""/>
+                                <img className="tech-icons-big" src={javascript} alt=""/>
+                            </div>
                         </div>
                     </div>
                     <div className="article-nav-section article-section">
