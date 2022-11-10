@@ -73,7 +73,6 @@ function Work() {
             <main>
                 <Article
                     title="Galactic Universe"
-                    image="article-one"
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
                     view={view.one}
@@ -87,7 +86,6 @@ function Work() {
                 </Article>
                 <Article
                     title="Second Page"
-                    image="article-two"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda atque ex ipsam rerum suscipit temporibus ullam! Consequuntur ea hic, illo numquam placeat praesentium unde voluptate! Doloremque hic illum impedit!"
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
@@ -95,7 +93,6 @@ function Work() {
                 />
                 <Article
                     title="Third Page"
-                    image="article-three"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda atque ex ipsam rerum suscipit temporibus ullam! Consequuntur ea hic, illo numquam placeat praesentium unde voluptate! Doloremque hic illum impedit!"
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
@@ -103,7 +100,6 @@ function Work() {
                 />
                 <Article
                     title="Fourth Page"
-                    image="article-four"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda atque ex ipsam rerum suscipit temporibus ullam! Consequuntur ea hic, illo numquam placeat praesentium unde voluptate! Doloremque hic illum impedit!"
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}

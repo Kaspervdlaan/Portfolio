@@ -10,16 +10,17 @@ import arrowLeft from "../../assets/arrow-left.png"
 import arrowRight from "../../assets/arrow-right.png"
 
 import { Carousel } from 'react-responsive-carousel';
-import galatic from "../../assets/galactic.PNG"
-import galatic2 from "../../assets/landingpage.PNG"
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import galatic from "../../assets/galactic.PNG";
+import galatic2 from "../../assets/landingpage.PNG";
+import {styles as style} from 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 function Article( { title, logicRight, logicLeft, view, description, descriptionTwo, github, image, liveDemo, children }) {
 
     return (
         <article className="article-group" className={view}>
             <div className="article-image-section article-section" className={image} >
-                <Carousel showThumbs={false} className="carousel">
+                <Carousel infiniteLoop={true} autoPlay={true} showThumbs={false} className="carousel">
                     <div>
                         <img src={galatic} alt=""/>
                         <p>galactic 1</p>

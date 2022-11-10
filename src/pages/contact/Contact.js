@@ -3,7 +3,6 @@ import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
-
 import emailjs from '@emailjs/browser';
 import swal from "sweetalert";
 
@@ -41,7 +40,7 @@ function Contact() {
 
                 <article className="article-group contact-page ">
                     <div id="about-me" className="article-image-section article-section">
-                        <h3>About me!</h3>
+                        <h3>About me</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad consectetur consequuntur dignissimos dolorem in, incidunt laboriosam, laudantium nesciunt nobis placeat quod, ratione recusandae rerum sint sit soluta unde voluptatibus.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid debitis error facilis itaque reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tenetur?</p>
                     </div>
