@@ -42,21 +42,8 @@ function Contact() {
                     <div id="about-me" className="article-image-section article-section">
                         <h3>About me</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad consectetur consequuntur dignissimos dolorem in, incidunt laboriosam, laudantium nesciunt nobis placeat quod, ratione recusandae rerum sint sit soluta unde voluptatibus.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid debitis error facilis itaque reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tenetur?</p>
                     </div>
 
-                    <div className="article-description-section article-section">
-
-                        <form ref={form} onSubmit={sendEmail}>
-                            <h2 className="message-h2">Send me a message!</h2>
-                            <label>
-                            <input required placeholder="email" type="email" name="user_email" /></label>
-                            <label>
-                            <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
-                            <button type="submit" id="send-button" className="contact-button">Send</button>/>
-                        </form>
-
-                    </div>
                     <div className="article-title-section article-section">
                         <div className="title-section">
                             <h2>Techstack</h2>
@@ -74,6 +61,20 @@ function Contact() {
                                 <img className="tech-icons-big" src={css} alt=""/>
                                 <img className="tech-icons-big" src={javascript} alt=""/>
                             </div>
+
+
+                        </div>
+                        <div className="article-description-section article-section">
+
+                            <form ref={form} onSubmit={sendEmail}>
+                                <h2 className="message-h2">Send me a message!</h2>
+                                <label>
+                                    <input required placeholder="email" type="email" name="user_email" /></label>
+                                <label>
+                                    <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
+                                <button type="submit" id="send-button" className="contact-button">Send</button>/>
+                            </form>
+
                         </div>
                     </div>
                     <div className="article-nav-section article-section">

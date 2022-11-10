@@ -149,8 +149,9 @@ main {
 }
 
 .contact-page {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
+
 }
 
 button {
@@ -431,12 +432,6 @@ textarea::placeholder {
     max-width: 100%;
   }
 
-  /*.wrapper {*/
-  /*  max-width: 100%;*/
-  /*  min-height: 85vh;*/
-  /*  height: auto;*/
-  /*}*/
-
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -515,6 +510,29 @@ textarea::placeholder {
   article .article-description-section {
     margin-bottom: 10px;
   }
+
+  main article .article-description-section,
+  main article .article-nav-section {
+    border:none;
+  }
+
+  main article .article-title-section,
+  main article .article-nav-section {
+    border:none;
+  }
+
+  main .contact-page .article-title-section {
+    padding: 2rem 0;
+  }
+
+  #about-me {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+
+  main article .article-description-section {
+    margin-top: 10%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -525,6 +543,8 @@ textarea::placeholder {
   #nav-link-section {
     gap: 1rem;
   }
+
+
 }
 
 @media screen and (max-width: 500px) {
