@@ -3,7 +3,6 @@ import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
-
 import emailjs from '@emailjs/browser';
 import swal from "sweetalert";
 
@@ -41,23 +40,11 @@ function Contact() {
 
                 <article className="article-group contact-page ">
                     <div id="about-me" className="article-image-section article-section">
-                        <h3>About me!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad consectetur consequuntur dignissimos dolorem in, incidunt laboriosam, laudantium nesciunt nobis placeat quod, ratione recusandae rerum sint sit soluta unde voluptatibus.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid debitis error facilis itaque reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tenetur?</p>
-                    </div>
-
-                    <div className="article-description-section article-section">
-
-                        <form ref={form} onSubmit={sendEmail}>
-                            <h2 className="message-h2">Send me a message!</h2>
-                            <label>
-                            <input required placeholder="email" type="email" name="user_email" /></label>
-                            <label>
-                            <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
-                            <button type="submit" id="send-button" className="contact-button">Send</button>/>
-                        </form>
+                        <h3>A fullstack developer in the making</h3>
+                        <p>I am currently halfway finished doing the Fullstack developer bootcamp by NOVI hogeschool. In the last half year I’ve been hard at work following the front end side of the bootcamp. Here I have learned that I love the art of coding, from problem solving to always being able to learn more. </p>
 
                     </div>
+
                     <div className="article-title-section article-section">
                         <div className="title-section">
                             <h2>Techstack</h2>
@@ -75,10 +62,21 @@ function Contact() {
                                 <img className="tech-icons-big" src={css} alt=""/>
                                 <img className="tech-icons-big" src={javascript} alt=""/>
                             </div>
-                        </div>
-                    </div>
-                    <div className="article-nav-section article-section">
 
+
+                        </div>
+                        <div className="article-description-section article-section form-section" id="form-section">
+
+                            <form ref={form} onSubmit={sendEmail}>
+                                <h2 className="message-h2">Send me a message!</h2>
+                                <label>
+                                    <input required placeholder="email" type="email" name="user_email" /></label>
+                                <label>
+                                    <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
+                                <button type="submit" id="send-button" className="contact-button">Send</button>/>
+                            </form>
+
+                        </div>
                     </div>
                 </article>
             </main>
