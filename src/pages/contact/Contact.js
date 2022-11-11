@@ -5,7 +5,7 @@ import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
 import emailjs from '@emailjs/browser';
 import swal from "sweetalert";
-
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Contact() {
     const form = useRef();
@@ -39,12 +39,14 @@ function Contact() {
             <main>
 
                 <article className="article-group contact-page ">
+                    <AnimationOnScroll animateIn="animate__fadeIn" animateOut="animate__fadeOut">
                     <div id="about-me" className="article-image-section article-section">
                         <h3>A fullstack developer in the making</h3>
                         <p>I am currently halfway finished doing the Fullstack developer bootcamp by NOVI hogeschool. In the last half year I’ve been hard at work following the front end side of the bootcamp. Here I have learned that I love the art of coding, from problem solving to always being able to learn more. </p>
 
                     </div>
-
+                    </AnimationOnScroll>
+                    <AnimationOnScroll animateIn="animate__fadeIn" animateOut="animate__fadeOut">
                     <div className="article-title-section article-section">
                         <div className="title-section">
                             <h2>Techstack</h2>
@@ -78,6 +80,7 @@ function Contact() {
 
                         </div>
                     </div>
+                    </AnimationOnScroll>
                 </article>
             </main>
         </div>
