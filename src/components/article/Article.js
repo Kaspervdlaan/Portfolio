@@ -11,12 +11,14 @@ import arrowRight from "../../assets/arrow-right.png"
 
 import { Carousel } from 'react-responsive-carousel';
 import {styles as style} from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import {Animate} from "react-simple-animate";
 
 
 function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, imageThree, liveDemo, children }) {
 
     return (
         <article className="article-group" className={view}>
+            <Animate play delay={0} duration={1} start={{opacity:'0' }} end={{opacity:'100' }}>
             <div className="article-image-section article-section" >
                 <Carousel infiniteLoop={true} autoPlay={true} showThumbs={false} className="carousel">
                     <div>
@@ -30,6 +32,8 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
                     </div>
                 </Carousel>
             </div>
+            </Animate>
+            <Animate play delay={0.5} duration={1} start={{opacity:'0' }} end={{opacity:'100' }}>
             <div className="article-description-section article-section">
                     {children}
                 <div className='icon-section'>
@@ -37,6 +41,8 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
                     {liveDemo && <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>}
                 </div>
             </div>
+            </Animate>
+            <Animate play delay={0.8} duration={1} start={{opacity:'0' }} end={{opacity:'100' }}>
             <div  className="article-title-section article-section" id="tech-used">
                     <div>
                         <h2>Tech used</h2>
@@ -48,10 +54,13 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
                         <img className="tech-icons-big" src={react} alt=""/>
                     </div>
             </div>
+            </Animate>
+            <Animate play delay={1.2} duration={1} start={{opacity:'0' }} end={{opacity:'100' }}>
             <div className="article-nav-section article-section">
                 <Button type='button' clickFunction={logicLeft} icon={arrowLeft}/>
                 <Button type='button' clickFunction={logicRight} icon={arrowRight}/>
             </div>
+            </Animate>
         </article>
     );
 }

@@ -2,10 +2,9 @@ import React from 'react';
 import Article from "../../components/article/Article";
 import {useState} from "react";
 
-import { Animate, AnimateKeyframes, AnimateGroup } from "react-simple-animate";
-
-import galatic from "../../assets/galactic.PNG";
-import galatic2 from "../../assets/landingpage.PNG";
+import galactic from "../../assets/galactic.PNG";
+import galactic2 from "../../assets/Galactic2.PNG";
+import galactic3 from "../../assets/Galactic3.PNG"
 
 import portfolio from "../../assets/portfolio.PNG"
 import portfolio2 from "../../assets/portfolio2.PNG"
@@ -79,7 +78,7 @@ function Work() {
 
     return (
         <div className="wrapper" id="/">
-            <Animate play duration={2} start={{ opacity: 0 }} end={{ opacity: 1 }}>
+
             <main>
                 <Article
                     logicLeft={buttonLeftClick}
@@ -87,9 +86,9 @@ function Work() {
                     view={view.one}
                     liveDemo="https://chimerical-bublanina-2208d7.netlify.app/"
                     github="https://github.com/Kaspervdlaan/SpaceApp"
-                    imageOne={galatic}
-                    imageTwo={galatic2}
-                    imageThree={galatic}
+                    imageOne={galactic}
+                    imageTwo={galactic2}
+                    imageThree={galactic3}
                 >
                     <h2>Galactic Universe Webapp</h2>
                     <p>
@@ -125,7 +124,7 @@ function Work() {
                 {/*    view={view.four}*/}
                 {/*/>*/}
             </main>
-            </Animate>
+
         </div>
     );
 }
