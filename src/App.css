@@ -151,7 +151,6 @@ main {
 .contact-page {
   display: flex;
   flex-direction: column;
-
 }
 
 button {
@@ -195,9 +194,6 @@ main article .article-description-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-main article .article-description-section {
   padding: 3rem;
 }
 
@@ -211,6 +207,10 @@ main article .article-title-section {
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
+}
+
+.tech-used-container {
+  align-items: flex-end;
 }
 
 main article .article-nav-section {
@@ -248,6 +248,11 @@ main article .article-nav-section button {
 .bottom-icon-section {
   display: flex;
   gap: 0.3rem;
+}
+
+#tech-used-container {
+   display: flex;
+   justify-content: space-between;
 }
 
 .top-icons {
@@ -337,7 +342,7 @@ textarea::placeholder {
 #about-me {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 20rem;
 }
 
 .carousel {
@@ -477,6 +482,11 @@ textarea::placeholder {
     padding-bottom: 0;
   }
 
+  #tech-used-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   main article .article-description-section {
     height: auto;
     padding-top: 0;
@@ -526,13 +536,18 @@ textarea::placeholder {
   }
 
   #about-me {
-    padding: 2rem;
+    padding: 2rem 15rem;
     padding-bottom: 0;
   }
 
-  main article .article-description-section {
-    margin-top: 10%;
+  #tech-used {
+    display: none;
   }
+
+  #form-section {
+    margin-top: 4rem;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -544,6 +559,10 @@ textarea::placeholder {
     gap: 1rem;
   }
 
+  #about-me {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
 
 }
 

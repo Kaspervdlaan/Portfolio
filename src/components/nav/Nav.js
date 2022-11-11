@@ -12,6 +12,10 @@ function Nav() {
         window.scrollTo(0,0)
 }
 
+    function toContact() {
+        window.scrollTo(800, 800)
+    }
+
     function toBot() {
         window.scrollTo(1000, 1000)
     }
@@ -22,8 +26,8 @@ function Nav() {
                 <img onClick={toTop} className="home-icon" src={home} alt="github-icon"/>
             </div>
             <div id="nav-link-section" className="nav-section">
-                <h4 className="work-link" onClick={toTop}>WORK</h4>
-                <h4 className="work-link" onClick={toBot}>ABOUT</h4>
+                <h4 className="work-link" onClick={toTop}>PROJECTS</h4>
+                <h4 className="work-link" onClick={toContact}>ABOUT</h4>
             </div>
             <div id="nav-social-section" className="nav-section">
                 <a rel="noreferrer" href="https://github.com/Kaspervdlaan" target="_blank"><img className="top-icons" src={github} alt="github-icon"/></a>

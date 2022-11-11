@@ -40,8 +40,9 @@ function Contact() {
 
                 <article className="article-group contact-page ">
                     <div id="about-me" className="article-image-section article-section">
-                        <h3>About me</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad consectetur consequuntur dignissimos dolorem in, incidunt laboriosam, laudantium nesciunt nobis placeat quod, ratione recusandae rerum sint sit soluta unde voluptatibus.</p>
+                        <h3>A fullstack developer in the making</h3>
+                        <p>I am currently halfway finished doing the Fullstack developer bootcamp by NOVI hogeschool. In the last half year I’ve been hard at work following the front end side of the bootcamp. Here I have learned that I love the art of coding, from problem solving to always being able to learn more. </p>
+
                     </div>
 
                     <div className="article-title-section article-section">
@@ -64,7 +65,7 @@ function Contact() {
 
 
                         </div>
-                        <div className="article-description-section article-section">
+                        <div className="article-description-section article-section form-section" id="form-section">
 
                             <form ref={form} onSubmit={sendEmail}>
                                 <h2 className="message-h2">Send me a message!</h2>
@@ -76,9 +77,6 @@ function Contact() {
                             </form>
 
                         </div>
-                    </div>
-                    <div className="article-nav-section article-section">
-
                     </div>
                 </article>
             </main>
