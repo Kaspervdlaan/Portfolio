@@ -11,8 +11,12 @@ function App() {
         <>
             <div className="nav-wrapper">
             <Nav/></div>
+
             <Work/>
+
+
             <Contact/>
+
         </>
 );
 }

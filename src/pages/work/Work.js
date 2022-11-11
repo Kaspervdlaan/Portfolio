@@ -2,6 +2,8 @@ import React from 'react';
 import Article from "../../components/article/Article";
 import {useState} from "react";
 
+import { Animate, AnimateKeyframes, AnimateGroup } from "react-simple-animate";
+
 import galatic from "../../assets/galactic.PNG";
 import galatic2 from "../../assets/landingpage.PNG";
 
@@ -77,6 +79,7 @@ function Work() {
 
     return (
         <div className="wrapper" id="/">
+            <Animate play duration={2} start={{ opacity: 0 }} end={{ opacity: 1 }}>
             <main>
                 <Article
                     logicLeft={buttonLeftClick}
@@ -98,6 +101,7 @@ function Work() {
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
                     view={view.two}
+                    github="https://github.com/Kaspervdlaan/portfoliov2"
                     imageOne={portfolio}
                     imageTwo={portfolio2}
                     imageThree={portfolio3}
@@ -121,6 +125,7 @@ function Work() {
                 {/*    view={view.four}*/}
                 {/*/>*/}
             </main>
+            </Animate>
         </div>
     );
 }
