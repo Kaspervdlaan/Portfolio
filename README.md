@@ -1,6 +1,6 @@
 Personal portfolio website
 
-<Tech used>
+#tech used
 - HTML
 - CSS
 - JavaScript
