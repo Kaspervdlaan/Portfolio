@@ -34,7 +34,7 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
                     {children}
                 <div className='icon-section'>
                     <a target="_blank" rel="noreferrer" href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
-                    <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>
+                    {liveDemo && <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>}
                 </div>
             </div>
             <div  className="article-title-section article-section" id="tech-used">

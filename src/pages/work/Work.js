@@ -98,6 +98,7 @@ function Work() {
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
                     view={view.two}
+                    github="https://github.com/Kaspervdlaan/portfoliov2"
                     imageOne={portfolio}
                     imageTwo={portfolio2}
                     imageThree={portfolio3}
