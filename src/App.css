@@ -31,6 +31,10 @@ body {
    overflow: hidden;
  }
 
+#project-wrapper {
+  margin-bottom: 15vh;
+}
+
 .home-wrapper {
   display: flex;
   height: 85vh;
@@ -40,6 +44,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  margin-bottom: 15vh;
 }
 
 .text-wrapper {
@@ -493,7 +498,7 @@ textarea::placeholder {
   }
 
   .hidden {
-    display: none;
+    display: flex;
     transform: none;
     opacity: 100;
   }
@@ -588,7 +593,7 @@ textarea::placeholder {
   }
 
   #nav-link-section {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   #about-me {
@@ -596,10 +601,28 @@ textarea::placeholder {
     padding-bottom: 0;
   }
 
+  #project-wrapper {
+    margin: 0;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
+
+  #nav-logo-section {
+    padding: 0.5rem 0.5rem;
+    justify-content: center;
+
+  }
+
   #nav-link-section {
-    display: none;
+    gap: 1rem;
+    padding: .5rem 0.5rem;
+  }
+
+  #nav-contact-section {
+    padding: 1rem 0.5rem;
+    margin-right: 0.5rem;
   }
 }
+

@@ -1,8 +1,6 @@
 import React from 'react';
-import parallax from "../../assets/parallax.jpg"
-import parallax2 from "../../assets/parallax.png"
+import parallax from "../../assets/parallax6.jpg"
 import {Animate} from "react-simple-animate";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Home() {
     window.addEventListener('scroll', function () {

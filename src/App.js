@@ -10,7 +10,7 @@ function App() {
 
     return (
         <>
-            <div className="nav-wrapper">
+            <div id="home" className="nav-wrapper">
             <Nav/></div>
             <Home/>
 
@@ -18,6 +18,7 @@ function App() {
 
 
             <Contact/>
+
 
         </>
 );

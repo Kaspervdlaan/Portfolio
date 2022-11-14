@@ -19,8 +19,9 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
     return (
         <article className="article-group" className={view}>
             <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
-            <div className="article-image-section article-section" >
-                <Carousel swipeable={false} showThumbs={false} className="carousel">
+            <div id="projects" className="article-image-section article-section" >
+                <a target="_blank" rel="noreferrer" href={liveDemo}>
+                <Carousel stopOnHover={true} showArrows={false} autoPlay={true} infiniteLoop={true} swipeable={false} showThumbs={false} className="carousel">
                     <div>
                         <img src={imageOne} alt=""/>
                     </div>
@@ -31,10 +32,11 @@ function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, ima
                         <img src={imageThree} alt=""/>
                     </div>
                 </Carousel>
+                </a>
             </div>
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
-            <div className="article-description-section article-section">
+            <div  className="article-description-section article-section">
                     {children}
                 <div className='icon-section'>
                     <a target="_blank" rel="noreferrer" href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
