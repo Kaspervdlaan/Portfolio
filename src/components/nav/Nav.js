@@ -2,22 +2,23 @@ import React from 'react';
 import github from '../../assets/github.png'
 import linkedin from '../../assets/linkedin.png'
 import home from '../../assets/home.png'
-import swal from 'sweetalert';
 
 function Nav() {
 
-
-
     function toTop() {
         window.scrollTo(0,0)
-}
+    }
+
+    function toProjects() {
+        window.scrollTo(800,800)
+    }
 
     function toContact() {
-        window.scrollTo(800, 800)
+        window.scrollTo(1600, 1600)
     }
 
     function toBot() {
-        window.scrollTo(1000, 1000)
+        window.scrollTo(2000, 2000)
     }
 
     return (
@@ -26,7 +27,7 @@ function Nav() {
                 <img onClick={toTop} className="home-icon" src={home} alt="github-icon"/>
             </div>
             <div id="nav-link-section" className="nav-section">
-                <h4 className="work-link" onClick={toTop}>PROJECTS</h4>
+                <h4 className="work-link" onClick={toProjects}>PROJECTS</h4>
                 <h4 className="work-link" onClick={toContact}>ABOUT</h4>
             </div>
             <div id="nav-social-section" className="nav-section">

@@ -18,17 +18,48 @@ body {
   margin: 0 ;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 85vh;
-  max-width: 1400px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 * {
   box-sizing: border-box;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 85vh;
+   max-width: 1600px;
+   margin: 0 auto;
+   overflow: hidden;
+ }
+
+.home-wrapper {
+  display: flex;
+  height: 85vh;
+  max-width: 1600px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-wrapper {
+  text-align: center;
+}
+
+.text-wrapper h1,
+.text-wrapper h2 {
+  margin: 0;
+
+}
+
+.parallax {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .nav-wrapper {
@@ -44,7 +75,8 @@ nav {
   z-index: 1;
   background-color: var(--background-color);
   height: 15vh;
-  width: 1400px;
+  width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid var(--border-color);
 }
@@ -432,7 +464,7 @@ textarea::placeholder {
   color: white;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   nav {
     max-width: 100%;
   }
@@ -536,7 +568,7 @@ textarea::placeholder {
   }
 
   #about-me {
-    padding: 2rem 15rem;
+    padding: 2rem 10rem;
     padding-bottom: 0;
   }
 
