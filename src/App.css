@@ -28,8 +28,13 @@ body {
    height: 85vh;
    max-width: 1600px;
    margin: 0 auto;
+   margin-bottom: 15vh;
    overflow: hidden;
  }
+
+#project-wrapper {
+  height: 100vh;
+}
 
 .home-wrapper {
   display: flex;
@@ -40,6 +45,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  margin-bottom: 15vh;
 }
 
 .text-wrapper {
@@ -89,6 +95,8 @@ nav .nav-section {
   align-items: center;
   justify-content: center;
 }
+
+
 
 .contact-button {
   background-color: var(--green-color);
@@ -176,7 +184,6 @@ a {
 }
 
 main {
-  flex-grow: 1;
   position: relative;
 }
 
@@ -196,7 +203,7 @@ main article {
   grid-template-rows: 3fr 1fr;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 15vh;
   transition: 0.6s;
 }
 
@@ -239,6 +246,7 @@ main article .article-title-section {
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
+  padding-bottom: 0;
 }
 
 .tech-used-container {
@@ -493,7 +501,7 @@ textarea::placeholder {
   }
 
   .hidden {
-    display: none;
+    display: flex;
     transform: none;
     opacity: 100;
   }
@@ -588,7 +596,7 @@ textarea::placeholder {
   }
 
   #nav-link-section {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   #about-me {
@@ -596,10 +604,28 @@ textarea::placeholder {
     padding-bottom: 0;
   }
 
+  #project-wrapper {
+    margin: 0;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
+
+  #nav-logo-section {
+    padding: 0.5rem 0.5rem;
+    justify-content: center;
+
+  }
+
   #nav-link-section {
-    display: none;
+    gap: 1rem;
+    padding: .5rem 0.5rem;
+  }
+
+  #nav-contact-section {
+    padding: 1rem 0.5rem;
+    margin-right: 0.5rem;
   }
 }
+

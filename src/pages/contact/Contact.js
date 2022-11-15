@@ -3,6 +3,7 @@ import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
+import git from "../../assets/git.png";
 import emailjs from '@emailjs/browser';
 import swal from "sweetalert";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -35,10 +36,10 @@ function Contact() {
 
     };
     return (
-        <div id="contact" className="wrapper">
+        <div id="about" className="wrapper">
             <main>
 
-                <article className="article-group contact-page ">
+                <article id="contact" className="article-group contact-page ">
                     <AnimationOnScroll animateIn="animate__fadeInUp" animateOut="">
                         <div id="about-me" className="article-image-section article-section">
                         <h3>A fullstack developer in the making</h3>
@@ -59,10 +60,10 @@ function Contact() {
                                 <img className="tech-icons-big" src={react} alt=""/>
                             </div>
                             <div className="bottom-icon-section">
-                                <img className="tech-icons-big" src={react} alt=""/>
-                                <img className="tech-icons-big" src={html} alt=""/>
-                                <img className="tech-icons-big" src={css} alt=""/>
-                                <img className="tech-icons-big" src={javascript} alt=""/>
+                                <img className="tech-icons-big" src={git} alt=""/>
+                                {/*<img className="tech-icons-big" src={html} alt=""/>*/}
+                                {/*<img className="tech-icons-big" src={css} alt=""/>*/}
+                                {/*<img className="tech-icons-big" src={javascript} alt=""/>*/}
                             </div>
 
 
@@ -74,7 +75,7 @@ function Contact() {
                                 <label>
                                     <input required placeholder="email" type="email" name="user_email" /></label>
                                 <label>
-                                    <textarea required cols="30" rows="10" placeholder="message" name="message" /></label>
+                                    < textarea id="contact" required cols="30" rows="10" placeholder="message" name="message" /></label>
                                 <button type="submit" id="send-button" className="contact-button">Send</button>/>
                             </form>
 

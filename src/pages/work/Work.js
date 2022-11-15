@@ -77,9 +77,9 @@ function Work() {
     }
 
     return (
-        <div className="wrapper" id="/">
+        <div className="wrapper" id="project-wrapper">
 
-            <main>
+            <main id="projects">
                 <Article
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
