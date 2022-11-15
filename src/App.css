@@ -28,12 +28,9 @@ body {
    height: 85vh;
    max-width: 1600px;
    margin: 0 auto;
-   overflow: hidden;
- }
 
-#project-wrapper {
-  margin-bottom: 15vh;
-}
+   margin-bottom: vh;
+ }
 
 .home-wrapper {
   display: flex;
@@ -94,6 +91,8 @@ nav .nav-section {
   align-items: center;
   justify-content: center;
 }
+
+
 
 .contact-button {
   background-color: var(--green-color);
@@ -181,7 +180,6 @@ a {
 }
 
 main {
-  flex-grow: 1;
   position: relative;
 }
 
@@ -201,7 +199,7 @@ main article {
   grid-template-rows: 3fr 1fr;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 15vh;
   transition: 0.6s;
 }
 
@@ -244,6 +242,7 @@ main article .article-title-section {
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
+  padding-bottom: 0;
 }
 
 .tech-used-container {

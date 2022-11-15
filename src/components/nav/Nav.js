@@ -6,30 +6,6 @@ import { Link } from 'react-scroll';
 
 
 function Nav() {
-
-    const projects = document.getElementById("#projects")
-
-    function toProjects() {
-        projects.scrollIntoView({ behavior: 'smooth', block: 'center'})
-    }
-
-
-    // function toTop() {
-    //     window.scrollTo(0,0)
-    // }
-    //
-    // function toProjects() {
-    //     window.scrollTo(600,600)
-    // }
-    //
-    // function toContact() {
-    //     window.scrollTo(1600, 1600)
-    // }
-    //
-    // function toBot() {
-    //     window.scrollTo(2000, 2000)
-    // }
-
     return (
         <nav>
             <div id="nav-logo-section" className="nav-section">
@@ -44,15 +20,16 @@ function Nav() {
             <div id="nav-link-section" className="nav-section">
                 <Link
                     activeClass="active"
-                    to="projects"
+                    to="project-wrapper"
                     spy={true}
                     smooth={true}
                     duration={200}>
+
                     <h4 className="work-link">PROJECTS</h4>
             </Link>
                 <Link
                     activeClass="active"
-                    to="contact"
+                    to="about"
                     spy={true}
                     smooth={true}
                     duration={200}><h4 className="work-link">ABOUT</h4></Link>
@@ -62,7 +39,7 @@ function Nav() {
                 <a rel="noreferrer" href="https://github.com/Kaspervdlaan" target="_blank"><img className="top-icons" src={linkedin} alt="linkedin-icon"/></a>
             </div>
             <div id="nav-contact-section" className="nav-section nav-background">
-                <Link
+                < Link
                     activeClass="active"
                     to="contact"
                     spy={true}
