@@ -14,26 +14,28 @@ import {styles as style} from 'react-responsive-carousel/lib/styles/carousel.min
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
-function Article( { logicRight, logicLeft, view, github, imageOne, imageTwo, imageThree, liveDemo, children }) {
+function Article( { logicRight, logicLeft, view, github, laptop, imageOne, imageTwo, imageThree, liveDemo, children }) {
 
     return (
         <article className="article-group" className={view}>
             <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
             <div className="article-image-section article-section" >
-                <a target="_blank" rel="noreferrer" href={liveDemo}>
-                <Carousel stopOnHover={true} showArrows={false} autoPlay={true} infiniteLoop={true} swipeable={false} showThumbs={false} className="carousel">
-                    <div>
-                        <img src={imageOne} alt=""/>
-                    </div>
-                    <div>
-                        <img src={imageTwo} alt=""/>
-                    </div>
-                    <div>
-                        <img src={imageThree} alt=""/>
-                    </div>
-                </Carousel>
-                </a>
+
+
+                    <picture className="mockup-container">
+                        <img src={imageOne} alt="galactic-universe-mockup"/>
+                    </picture>
+
+                {/*<Carousel stopOnHover={true} showArrows={false} autoPlay={false} infiniteLoop={true} swipeable={false} showThumbs={false} className="carousel">*/}
+                {/*    <div>*/}
+                {/*        <img src={imageOne} alt=""/>*/}
+                {/*    </div>*/}
+
+                {/*</Carousel>*/}
+
+
             </div>
+
             </AnimationOnScroll>
             <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
             <div className="article-description-section article-section">

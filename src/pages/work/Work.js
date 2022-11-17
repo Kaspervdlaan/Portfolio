@@ -9,6 +9,9 @@ import galactic3 from "../../assets/Galactic3.PNG"
 import portfolio from "../../assets/portfolio.PNG"
 import portfolio2 from "../../assets/portfolio2.PNG"
 import portfolio3 from "../../assets/portfolio3.PNG"
+import laptop from "../../assets/laptop-galactic.png"
+import mobile from "../../assets/phone-galactic copy.png"
+import mockup from "../../assets/mockup.png"
 
 function Work() {
     const [view, setView] = useState({
@@ -86,7 +89,7 @@ function Work() {
                     view={view.one}
                     liveDemo="https://chimerical-bublanina-2208d7.netlify.app/"
                     github="https://github.com/Kaspervdlaan/SpaceApp"
-                    imageOne={galactic}
+                    imageOne={mockup}
                     imageTwo={galactic2}
                     imageThree={galactic3}
                 >
@@ -101,7 +104,7 @@ function Work() {
                     logicRight={buttonRightClick}
                     view={view.two}
                     github="https://github.com/Kaspervdlaan/portfoliov2"
-                    imageOne={portfolio}
+                    imageOne={mockup}
                     imageTwo={portfolio2}
                     imageThree={portfolio3}
                 >
