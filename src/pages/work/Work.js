@@ -2,13 +2,8 @@ import React from 'react';
 import Article from "../../components/article/Article";
 import {useState} from "react";
 
-import galactic from "../../assets/galactic.PNG";
-import galactic2 from "../../assets/Galactic2.PNG";
-import galactic3 from "../../assets/Galactic3.PNG"
-
-import portfolio from "../../assets/portfolio.PNG"
-import portfolio2 from "../../assets/portfolio2.PNG"
-import portfolio3 from "../../assets/portfolio3.PNG"
+import mockupPortfolio from "../../assets/Mockup-portfolio.png"
+import mockup from "../../assets/mockup.png"
 
 function Work() {
     const [view, setView] = useState({
@@ -86,9 +81,7 @@ function Work() {
                     view={view.one}
                     liveDemo="https://chimerical-bublanina-2208d7.netlify.app/"
                     github="https://github.com/Kaspervdlaan/SpaceApp"
-                    imageOne={galactic}
-                    imageTwo={galactic2}
-                    imageThree={galactic3}
+                    imageOne={mockup}
                 >
                     <h2>Galactic Universe Webapp</h2>
                     <p>
@@ -101,9 +94,7 @@ function Work() {
                     logicRight={buttonRightClick}
                     view={view.two}
                     github="https://github.com/Kaspervdlaan/portfoliov2"
-                    imageOne={portfolio}
-                    imageTwo={portfolio2}
-                    imageThree={portfolio3}
+                    imageOne={mockupPortfolio}
                 >
                     <h2>Portfolio website</h2>
                     <p>The website we are on right now, made from scratch.</p>
