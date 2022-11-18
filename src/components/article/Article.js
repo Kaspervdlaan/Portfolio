@@ -18,7 +18,7 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
 
     return (
         <article className="article-group" className={view}>
-            <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
+            {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-image-section article-section" >
 
 
@@ -36,8 +36,8 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
 
             </div>
 
-            </AnimationOnScroll>
-            <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
+            {/*</AnimationOnScroll>*/}
+            {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-description-section article-section">
                     {children}
                 <div className='icon-section'>
@@ -45,8 +45,8 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
                     {liveDemo && <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>}
                 </div>
             </div>
-            </AnimationOnScroll>
-            <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
+            {/*</AnimationOnScroll>*/}
+            {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div  className="article-title-section article-section" id="tech-used">
                     <div>
                         <h2>Tech used</h2>
@@ -58,13 +58,13 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
                         <img className="tech-icons-big" src={react} alt=""/>
                     </div>
             </div>
-            </AnimationOnScroll>
-            <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">
+            {/*</AnimationOnScroll>*/}
+            {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-nav-section article-section">
                 <Button type='button' clickFunction={logicLeft} icon={arrowLeft}/>
                 <Button type='button' clickFunction={logicRight} icon={arrowRight}/>
             </div>
-            </AnimationOnScroll>
+            {/*</AnimationOnScroll>*/}
         </article>
     );
 }

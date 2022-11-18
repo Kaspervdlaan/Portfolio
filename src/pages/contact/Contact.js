@@ -36,7 +36,7 @@ function Contact() {
 
     };
     return (
-        <div id="about" className="wrapper">
+        <div id="about" >
             <main>
 
                 <article id="contact" className="article-group contact-page ">
@@ -48,7 +48,7 @@ function Contact() {
                     </div>
                     </AnimationOnScroll>
                     <AnimationOnScroll  animateIn="animate__fadeInUp" animateOut="animate__slideOutDown">
-                    <div className="article-title-section article-section">
+                    <div className="tech-stack-section ">
                         <div className="title-section">
                             <h2>Techstack</h2>
                         </div>
@@ -68,7 +68,7 @@ function Contact() {
 
 
                         </div>
-                        <div className="article-description-section article-section form-section" id="form-section">
+                        <div className=" form-section" id="form-section">
 
                             <form ref={form} onSubmit={sendEmail}>
                                 <h2 className="message-h2">Send me a message!</h2>

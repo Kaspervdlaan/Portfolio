@@ -15,7 +15,7 @@ html {
 
 body {
   background-color: var(--background-color);
-  margin: 0 ;
+  margin: 0;
 }
 
 * {
@@ -25,15 +25,15 @@ body {
 .wrapper {
    display: flex;
    flex-direction: column;
-   height: 85vh;
+   height: 100vh;
    max-width: 1600px;
    margin: 0 auto;
-   margin-bottom: 15vh;
    overflow: hidden;
  }
 
-#project-wrapper {
-  height: 100vh;
+#about {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .home-wrapper {
@@ -208,9 +208,7 @@ main article {
   transition: 0.6s;
 }
 
-main article .article-section {
-  height: 100%;
-}
+
 
 main article .article-description-section,
 main article .article-nav-section {
@@ -224,6 +222,7 @@ main article .article-nav-section {
 
 main article .article-image-section {
   display: flex;
+  height: 60vh;
   background-color: var(--background-color);
   align-items: center;
   justify-content: center;
@@ -232,6 +231,7 @@ main article .article-image-section {
 
 main article .article-description-section {
   display: flex;
+  height: 60vh;
   flex-direction: column;
   justify-content: flex-end;
   padding: 3rem;
@@ -244,6 +244,15 @@ main article .article-description-section .tech-container {
 
 main article .article-title-section {
   display: flex;
+  height: 25vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.tech-stack-section {
+  display: flex;
+  height: 35vh;
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
@@ -255,6 +264,7 @@ main article .article-title-section {
 
 main article .article-nav-section {
   display: flex;
+  height: 25vh;
   align-items: center;
   justify-content: space-around;
 }
@@ -380,14 +390,17 @@ textarea::placeholder {
 }
 
 #about-me {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   padding: 2rem 20rem;
 }
 
+
 .mockup-container {
   display: flex;
   padding: 1rem;
+  height: 55vh;
   justify-content: center;
   border-radius: 20px;
   margin: 1rem;
@@ -396,10 +409,7 @@ textarea::placeholder {
 
 .mockup-container img {
   width: 100%;
-  max-width: 700px;
 }
-
-
 
 .swal-modal {
   width: 350px;
@@ -478,15 +488,56 @@ textarea::placeholder {
   color: white;
 }
 
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    min-height: 110vh;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+
+
+
+}
+
 @media screen and (max-width: 1000px) {
   nav {
     max-width: 100%;
   }
 
+  .tech-stack-section {
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  #about-me {
+    height: auto;
+  }
+
+  .tech-stack-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 85vh;
+    min-height: 180vh;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -513,7 +564,7 @@ textarea::placeholder {
   }
 
   .after {
-    display: none;
+    display: flex;
     transform: none;
     opacity: 100;
   }
@@ -523,7 +574,6 @@ textarea::placeholder {
   }
 
   main article .article-title-section {
-    height: auto;
     padding-top: 0;
     padding-bottom: 0;
   }
