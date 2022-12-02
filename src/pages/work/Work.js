@@ -2,8 +2,13 @@ import React from 'react';
 import Article from "../../components/article/Article";
 import {useState} from "react";
 
-import mockupPortfolio from "../../assets/Mockup-portfolio.png"
+import bureauvanbreukelen from "../../assets/mockupBVB.PNG"
 import mockup from "../../assets/mockup.png"
+import html from "../../assets/html.png";
+import css from "../../assets/css.png";
+import javascript from "../../assets/javascript.png";
+import react from "../../assets/react.png";
+import tailwind from "../../assets/tailwind.png"
 
 function Work() {
     const [view, setView] = useState({
@@ -82,24 +87,36 @@ function Work() {
                     liveDemo="https://chimerical-bublanina-2208d7.netlify.app/"
                     github="https://github.com/Kaspervdlaan/SpaceApp"
                     imageOne={mockup}
+                    title="Galactic Universe Webapp"
+                    descOne="Front-end space news/data web application featuring data from five different api endpoints."
+                    descTwo="Build using React, React hooks, React router, State, Authentication, Axios, Css modules."
                 >
-                    <h2>Galactic Universe Webapp</h2>
-                    <p>
-                        Front-end space news/data web application featuring data from five different api endpoints. </p>
+                    <img className="tech-icons-big" src={html} alt=""/>
+                    <img className="tech-icons-big" src={css} alt=""/>
+                    <img className="tech-icons-big" src={javascript} alt=""/>
+                    <img className="tech-icons-big" src={react} alt=""/>
 
-                    <p>Build using React, React hooks, React router, State, Authentication, Axios, Css modules. </p>
+
                 </Article>
                 <Article
                     logicLeft={buttonLeftClick}
                     logicRight={buttonRightClick}
                     view={view.two}
+                    liveDemo="https://melodious-mousse-49311c.netlify.app/"
                     github="https://github.com/Kaspervdlaan/portfoliov2"
-                    imageOne={mockupPortfolio}
+                    imageOne={bureauvanbreukelen}
+                    title="Bureau van Breukelen"
+                    descOne="Portfolio website Bureau van Breukelen"
+                    descTwo="Build using ReactJs & tailwindCSS"
+
                 >
-                    <h2>Portfolio website</h2>
-                    <p>The website we are on right now, made from scratch.</p>
-                    <p>Build using React and multiple NPM packages.</p>
+                    <img className="tech-icons-big" src={html} alt=""/>
+                    <img className="tech-icons-big" src={javascript} alt=""/>
+                    <img className="tech-icons-big" src={react} alt=""/>
+                    <img className="tech-icons-big" src={tailwind} alt=""/>
                 </Article>
+
+
                 {/*<Article*/}
                 {/*    title="Third Page"*/}
                 {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda atque ex ipsam rerum suscipit temporibus ullam! Consequuntur ea hic, illo numquam placeat praesentium unde voluptate! Doloremque hic illum impedit!"*/}

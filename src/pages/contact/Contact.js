@@ -4,6 +4,7 @@ import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 import react from "../../assets/react.png";
 import git from "../../assets/git.png";
+import tailwind from "../../assets/tailwind.png"
 import emailjs from '@emailjs/browser';
 import swal from "sweetalert";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -61,7 +62,7 @@ function Contact() {
                             </div>
                             <div className="bottom-icon-section">
                                 <img className="tech-icons-big" src={git} alt=""/>
-                                {/*<img className="tech-icons-big" src={html} alt=""/>*/}
+                                <img className="tech-icons-big" src={tailwind} alt=""/>
                                 {/*<img className="tech-icons-big" src={css} alt=""/>*/}
                                 {/*<img className="tech-icons-big" src={javascript} alt=""/>*/}
                             </div>

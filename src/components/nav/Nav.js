@@ -39,7 +39,7 @@ function Nav() {
                 <a rel="noreferrer" href="https://github.com/Kaspervdlaan" target="_blank"><img className="top-icons" src={linkedin} alt="linkedin-icon"/></a>
             </div>
             <div id="nav-contact-section" className="nav-section nav-background">
-                < Link
+                <Link
                     activeClass="active"
                     to="contact"
                     spy={true}

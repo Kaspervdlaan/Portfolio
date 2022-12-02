@@ -401,8 +401,9 @@ textarea::placeholder {
   display: flex;
   height: 55vh;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 1rem;
+  overflow: hidden;
   /*background-color: #795515;*/
   /*border: 1px solid rgba(250, 235, 215, 0.5);*/
   /*box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 14px;*/
@@ -503,8 +504,6 @@ textarea::placeholder {
   h3 {
     font-size: 14px;
   }
-
-
 
 }
 
@@ -655,9 +654,6 @@ textarea::placeholder {
     justify-content: center;
     border-radius: 20px;
     margin: 1rem;
-    background-color: #0a0908;
-    border: 1px solid rgba(250, 235, 215, 0.5);
-    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 14px;
   }
 
   #nav-social-section {
@@ -667,6 +663,7 @@ textarea::placeholder {
   #nav-link-section {
     gap: 1.5rem;
   }
+
 
   #about-me {
     padding: 2rem;

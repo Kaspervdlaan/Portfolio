@@ -1,21 +1,13 @@
 import React from 'react';
 import Button from "../button/Button";
-import html from "../../assets/html.png"
-import css from "../../assets/css.png"
-import javascript from "../../assets/javascript.png"
-import react from "../../assets/react.png"
+
 import githubIcon from "../../assets/github-blue.png"
 import livesite from "../../assets/livesite.png"
 import arrowLeft from "../../assets/arrow-left.png"
 import arrowRight from "../../assets/arrow-right.png"
 
-import { Carousel } from 'react-responsive-carousel';
-import {styles as style} from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-
-
-function Article( { logicRight, logicLeft, view, github, laptop, imageOne, imageTwo, imageThree, liveDemo, children }) {
-
+function Article( { logicRight, logicLeft, view, github, title, descOne, descTwo, imageOne, liveDemo, children }) {
+    const tailwind = true;
     return (
         <article className="article-group" className={view}>
             {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
@@ -39,7 +31,11 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
             {/*</AnimationOnScroll>*/}
             {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-description-section article-section">
-                    {children}
+                <h2>{title}</h2>
+                <p>
+                    {descOne} </p>
+
+                <p>{descTwo}</p>
                 <div className='icon-section'>
                     <a target="_blank" rel="noreferrer" href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
                     {liveDemo && <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>}
@@ -52,19 +48,13 @@ function Article( { logicRight, logicLeft, view, github, laptop, imageOne, image
                         <h2>Tech used</h2>
                     </div>
                     <div>
-                        <img className="tech-icons-big" src={html} alt=""/>
-                        <img className="tech-icons-big" src={css} alt=""/>
-                        <img className="tech-icons-big" src={javascript} alt=""/>
-                        <img className="tech-icons-big" src={react} alt=""/>
+                        {children}
                     </div>
             </div>
-            {/*</AnimationOnScroll>*/}
-            {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-nav-section article-section">
                 <Button type='button' clickFunction={logicLeft} icon={arrowLeft}/>
                 <Button type='button' clickFunction={logicRight} icon={arrowRight}/>
             </div>
-            {/*</AnimationOnScroll>*/}
         </article>
     );
 }
