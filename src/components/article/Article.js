@@ -31,7 +31,7 @@ function Article( { logicRight, logicLeft, view, github, title, descOne, descTwo
             {/*</AnimationOnScroll>*/}
             {/*<AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn" animateOut="animate__fadeOut">*/}
             <div className="article-description-section article-section">
-                <h2>{title}</h2>
+                <h2 className="bar">{title}</h2>
                 <p>
                     {descOne} </p>
 

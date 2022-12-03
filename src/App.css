@@ -368,6 +368,20 @@ form {
   color: var(--orange-color);
 }
 
+.bar {
+  position: relative;
+}
+
+.bar::after{
+  content : "";
+  position : absolute;
+  width : 60px;
+  height : 6px;
+  background-color: var(--pink-color);
+  bottom: -6px;
+  left: 0px;
+}
+
 input, textarea {
   background-color: var(--background-color);
   color: var(--pink-color);
