@@ -2,8 +2,8 @@ import React from 'react';
 import Article from "../../components/article/Article";
 import {useState} from "react";
 
-import bureauvanbreukelen from "../../assets/mockupBVB.PNG"
-import mockup from "../../assets/mockup.png"
+import bureauvanbreukelen from "../../assets/bvb.PNG"
+import mockup from "../../assets/galx.PNG"
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
@@ -90,6 +90,8 @@ function Work() {
                     title="Galactic Universe Webapp"
                     descOne="Front-end space news/data web application featuring data from five different api endpoints."
                     descTwo="Build using React, React hooks, React router, State, Authentication, Axios, Css modules."
+                    react="ReactJs"
+                    twind="CSS3"
                 >
                     <img className="tech-icons-big" src={html} alt=""/>
                     <img className="tech-icons-big" src={css} alt=""/>
@@ -106,8 +108,10 @@ function Work() {
                     github="https://github.com/Kaspervdlaan/portfoliov2"
                     imageOne={bureauvanbreukelen}
                     title="Bureau van Breukelen"
-                    descOne="Portfolio website Bureau van Breukelen"
-                    descTwo="Build using ReactJs & tailwindCSS"
+                    descOne="Website made for client. Bureau van Breukelen porfolio website."
+                    descTwo="Build using:"
+                    react="ReactJs"
+                    twind="Tailwind"
 
                 >
                     <img className="tech-icons-big" src={html} alt=""/>

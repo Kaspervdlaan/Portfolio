@@ -360,6 +360,14 @@ form {
   height: 100%;
 }
 
+.tech {
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: 1px solid var(--orange-color);
+  margin-left: .8rem;
+  color: var(--orange-color);
+}
+
 input, textarea {
   background-color: var(--background-color);
   color: var(--pink-color);
@@ -400,17 +408,16 @@ textarea::placeholder {
 .mockup-container {
   display: flex;
   height: 55vh;
+  padding:2rem;
   justify-content: center;
-  border-radius: 10px;
+
   margin: 1rem;
   overflow: hidden;
-  /*background-color: #795515;*/
-  /*border: 1px solid rgba(250, 235, 215, 0.5);*/
-  /*box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 14px;*/
 }
 
 .mockup-container img {
   width: 100%;
+  border-radius: 15px;
 }
 
 .swal-modal {

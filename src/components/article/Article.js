@@ -6,7 +6,7 @@ import livesite from "../../assets/livesite.png"
 import arrowLeft from "../../assets/arrow-left.png"
 import arrowRight from "../../assets/arrow-right.png"
 
-function Article( { logicRight, logicLeft, view, github, title, descOne, descTwo, imageOne, liveDemo, children }) {
+function Article( { logicRight, logicLeft, view, github, title, descOne, descTwo, imageOne, liveDemo, twind, react ,children }) {
     const tailwind = true;
     return (
         <article className="article-group" className={view}>
@@ -35,7 +35,10 @@ function Article( { logicRight, logicLeft, view, github, title, descOne, descTwo
                 <p>
                     {descOne} </p>
 
-                <p>{descTwo}</p>
+
+                <p>{descTwo}<span className="tech">{react}</span>
+                    <span className="tech"span>{twind}</span></p>
+
                 <div className='icon-section'>
                     <a target="_blank" rel="noreferrer" href={github}><img className="tech-icons" src={githubIcon} alt=""/></a>
                     {liveDemo && <a target="_blank" rel="noreferrer" href={liveDemo}><img className="tech-icons" src={livesite} alt=""/></a>}
